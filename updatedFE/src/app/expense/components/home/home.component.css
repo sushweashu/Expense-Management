@@ -1,0 +1,9 @@
+.card-props {
+    box-shadow: 30px 28px 26px -15px #e0dfdf;
+    text-align: center;
+    border-color: gray;
+    border-radius: 10px;
+}
+.pad-20 {
+    padding: 20px;
+}

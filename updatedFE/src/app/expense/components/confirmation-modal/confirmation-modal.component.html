@@ -1,0 +1,57 @@
+<!-- <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="word-wrap">{{message}}</h4>
+                <div class="box-footer text-center">
+                    <span *ngIf="!isInfoModal">
+                        <div class="row btn-padding">
+                            <div class="offset-md-3 col-md-2">
+                        <button class="button-all btn" (click)="submit(true)">Yes</button>
+                    </div>
+                    <div class="offset-md-1 col-md-2">
+                        <button class="button-all btn" (click)="submit(false)">No</button>
+                    </div>
+                </div>
+                    </span>
+                    <span *ngIf="isInfoModal">
+                        <button class="button-all btn" (click)="submit(true)">Ok</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="container">
+        <div class="row pad-20">
+            <div class="col-md-12 text-center">
+                <h6>{{message}}</h6>
+                {{messageToMoveToNextRound}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <span *ngIf="!isInfoModal">
+                    <div class="row btn-padding">
+                        <div class="offset-md-3 col-md-2">
+                            <button class="button-all btn-block pad-10" (click)="submit(true)">Yes</button>
+                        </div>
+                        <div class="offset-md-1 col-md-2">
+                            <button class="button-all btn-block pad-10" (click)="submit(false)">No</button>
+                        </div>
+                    </div>
+                </span>
+    
+            </div>
+        </div>
+        <div class="row pad-10">
+            <div class="col-md-12 text-center">
+    
+                <span *ngIf="isInfoModal">
+                    <button class="button-all btn text-center" (click)="submit(true)">Ok</button>
+                </span>
+    
+            </div>
+        </div>
+    
+    </div>

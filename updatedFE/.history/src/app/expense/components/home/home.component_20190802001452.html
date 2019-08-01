@@ -1,0 +1,65 @@
+<div class="container-fluid bg-white">
+  <div class="row">
+    <div class="col-md-3">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-9">
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 pad-20">
+          <nav class="breadcrumb breadcrumb-heading">
+            <div class=" col-md-3  col-sm-12 col-xs-12 ">
+              <a class="breadcrumb-item">EXPENSE</a>
+            </div>
+            <div class=" offset-md-6 col-md-3  col-sm-12 col-xs-12 ">
+              <a class="breadcrumb-item">EXPENSE</a>
+              <a class="breadcrumb-item">Home</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+          <div class="card card-props pad-20 ">
+          <h6>Total Expenses: <b>{{totalExpenseAmount}}</b></h6>
+            </div>
+        <p>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-12" style="padding-top: 45px;">
+          <button type="button" class="btn button-all  padding color-white" (click)="addExpense()">Add Expense</button>
+        </div>
+      </div>
+      <div class="batchtable table-responsive pad-10 ">
+        <table datatable [dtTrigger]="dtTrigger" [dtOptions]="dtOptions" class="table">
+          <thead>
+            <tr>
+              <th>SL NO</th>
+              <th>Category</th>
+              <th>Item Name</th>
+              <th>Amount</th>
+              <th>Expense Date</th>
+              <th *ngIf="!editMode">Action</th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of expenseList let i=index">
+              <td>{{i+1}}</td>
+              <td>{{item.categoryId}}</td>
+              <td>{{item.itemName}}</td>
+              <td>{{item.amount}}</td>
+              <td> {{item.expenseDate}}</td>
+              <td>
+                <button type="button" class="btn button-all  padding color-white" (click)="editExpense(item._id)">Edit</button>
+                <button type="button" class="btn button-all  padding color-white" (click)="deleteExpense(item._id)">Delete</button>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>

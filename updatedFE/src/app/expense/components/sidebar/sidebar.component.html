@@ -1,0 +1,21 @@
+<nav id="sidebar">
+
+  <ul class="list-unstyled components">
+
+    <p>
+      <span class="space text-center">DASHBOARD</span>
+    </p>
+    <li>
+      <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+        <span class="space">EXPENSES </span></a>
+      <ul id="homeSubmenu">
+        <li>
+          <a [routerLink]="['/expense/home']">Home</a>
+        </li>
+        <li>
+          <a [routerLink]="['/expense/settings']">Settings</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

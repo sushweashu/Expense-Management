@@ -1,0 +1,377 @@
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.padding{
+    padding:5px 20px 5px 20px;
+}
+.dropbtn {
+    border: 1px solid transparent !important;
+    }
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.border-red{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+body {
+    background: #f2f2f2;
+}
+
+
+
+
+
+
+.heading {
+    background-color: white;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    box-shadow: 1px 3px lightgrey;
+    font-size: 14px;
+  
+}
+
+
+
+
+
+
+.contfluid-bg {
+    background-color: #f2f2f2;
+}
+
+table.dataTable td, table.dataTable th {
+    box-sizing: content-box;
+}
+.margin-top {
+    margin-top: 20px;
+}
+
+
+
+.container-back {
+    background-color: white;
+}
+
+
+
+.padding-top {
+    padding-top: 30px;
+}
+
+/* / right side content / */
+
+body {
+    background-color: #f2f2f2;
+}
+
+/* / tabl / */
+
+
+/* / table..... / */
+
+table {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+th {
+    font-weight: 800;
+}
+
+.table, th, td {
+    border: 1px solid black;;
+}
+
+.margn-left {
+    margin-left: 10px;
+}
+
+.form-check-label {
+    float: inherit !important;
+}
+
+/* ///////////student-details/////////// */
+
+.col-md-3.pers-padding-top {
+    padding-top: 10px;
+}
+
+
+
+
+.font-bold {
+    font-weight: bold;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* start of mainheading */
+
+
+
+
+.heading {
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 1px 3px lightgrey;
+    font-size: 14px;
+    box-shadow: 0 -3px 7px 0 transparent, 0 -31px 12px -6px transparent, 1px 4px 42px 0 rgba(0, 0, 0, 0.03);
+}
+
+
+
+
+
+.breadcrumb-item {
+    color: black !important;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+
+
+
+table {
+    text-overflow: ellipsis;
+}
+
+.tabletop {
+    overflow-x: auto;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+th {
+    font-weight: 600;
+    color: black 
+}
+
+.table, th, td {
+    border: 1px solid #f5f5f5;
+}
+
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+th {
+    font-weight: 800;
+}
+
+.bodypart {
+    background-color: white;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 100px;
+}
+
+/* ///////////container/////////// */
+
+
+
+/* modals */
+
+.fade {
+    background-color: black e0;
+}
+
+.totalmodal {
+    border-radius: 20px;
+}
+
+.totalusers {
+    margin-top: 8px;
+    padding-left: 6px;
+    font-size: 13px;
+    color: black ;
+}
+
+
+
+
+
+
+.alert-danger {
+    color: red;
+    font-size: 12px;
+    background-color: transparent;
+    
+}
+
+
+
+
+
+input[type=date] {
+    text-transform: uppercase;
+    }
+
+
+
+
+
+.overall-font {
+    padding-top: 8px;
+    color: black ;
+}
+
+
+
+/* atul feb 5 addes CSS---------------------------------- */
+
+/* breadCrumb */
+
+.breadcrumb-heading {
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 1px 3px lightgrey;
+    color: black ;
+
+    box-shadow: 4px 2px 12px -3px grey;
+    
+}
+
+.pad-10 {
+    padding: 10px;
+}
+
+.pad-20 {
+    padding: 20px;
+}
+
+.mandatory-field {
+    padding: 2px;
+    color: red;
+}
+
+.label-font {
+    font-weight: 600;
+    color: black ;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+
+.input-type {
+    
+    border: 1px solid black !important;
+    outline: none;
+    box-shadow: none !important;
+    font-size: 14px;
+    height: 30px;;
+}
+
+.card-heading-bg {
+    background: linear-gradient(to right, #193c7b,#5c96ff);
+}
+
+.button-font {
+    font-size: 12px;
+}
+
+.font-size-10{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+.inputfile {
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    z-index: -1;
+}
+
+.button-all {
+    background: linear-gradient(to right, #193c7b,#5c96ff);
+
+    color: white;
+    font-size: 12px;
+    
+    box-shadow: 10px 10px 35px -3px grey ;
+    font-weight: 800;
+    border-color: transparent;
+    cursor: pointer;
+    outline-color: transparent !important;
+}
+
+.card-shadow{
+    box-shadow: -2px 4px 28px -12px grey;
+}
+
+/* hide up and down arrow for date picker */
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.outline-card-border {
+    box-shadow: 0px 1px 10px 0px #FFDA00;
+    border-radius: 30px;
+    border: none;
+}
+
+.heading-font {
+    font-weight: 600;
+    color: black ;
+    font-size: 20px;
+}
+
+
+
+.error-message {
+    color: brown;
+}
+
+.success-message {
+    color: green;
+}
+
+/* table */
+
+.table, thead, tr, tbody, th, td {
+    text-align: center;
+}
+
+.angular-with-newlines {
+    white-space: pre-wrap;
+}
+
+.font-color-global {
+    color: black ;
+}
+.delete-qualification-icon {
+    position: absolute;
+    width: 100%;
+    margin-left: 100px;
+    margin-top: -22px;
+}

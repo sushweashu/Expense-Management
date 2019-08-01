@@ -1,0 +1,57 @@
+<div class="container-fluid bg-white">
+  <div class="row">
+    <div class="col-md-3">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-9">
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 pad-20">
+          <nav class="breadcrumb breadcrumb-heading">
+            <div class=" col-md-3  col-sm-12 col-xs-12 ">
+              <a class="breadcrumb-item">EXPENSE</a>
+            </div>
+            <div class=" offset-md-6 col-md-3  col-sm-12 col-xs-12 ">
+              <a class="breadcrumb-item">EXPENSE</a>
+              <a class="breadcrumb-item">Settings</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <form #categoryForm="ngForm" (submit)="addCategory(); categoryForm.reset()">
+
+        <div class="row pad-20">
+          <div class="col-md-2 col-sm-2 col-xs-12">
+            <label class="label-font">Categories: </label>
+          </div>
+          <div class="col-md-3 col-sm-2 col-xs-12">
+            <input type="text" class="form-control input-type" placeholder="Category" name="category"
+              #category="ngModel" required [(ngModel)]="param.category" pattern="[a-zA-Z]*" required>
+              <div [hidden]="category.valid || category.untouched">
+                  <div *ngIf="category.errors && category.errors['required']"
+                      class="alert alert-danger error-text">
+                      Enter the category name
+                  </div>
+                  <div *ngIf="category.errors && category.errors['pattern']"
+                      class="alert alert-danger error-text">
+                      Enter the valid category name
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-2 col-sm-2 col-xs-12">
+            <button type="button" class="btn button-all  padding color-white" (click)="addCategory()" [disabled]="!categoryForm.valid">Add
+              Category</button>
+          </div>
+        </div>
+        <div class="row pad-10" >
+            <div class="col-md-3 col-sm-3 col-xs-12" *ngFor="let category of categoryList">
+              <div class="card margin-top card-qualification-background text-center pad-10">
+                    {{category.category}}
+                    <span class="delete-qualification-icon" (click)="deleteCategory(category._id)">
+                        <img src="../../../../assets/ABC_CANCEL_ICON-02.png"> </span>
+              </div>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>

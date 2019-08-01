@@ -1,0 +1,85 @@
+<div class="container-fluid text-center pad-10">
+  <h5>
+    <b>Experience</b>
+  </h5>
+  <form #expenseForm="ngForm" autocomplete="off">
+    <div class="row pad-20">
+      <div class="offset-md-3 col-md-2 col-sm-2 col-xs-12">
+        <label class="label-font">Category</label>
+      </div>
+      <div class="col-md-3 col-sm-2 col-xs-12">
+        <select class="form-control input-type" name="categoryId" #categoryId="ngModel" required [(ngModel)]="expense.categoryId">
+          <option value="" disabled>Select Category ID</option>
+          <option *ngFor="let item of categoryList; let i = index;" [value]="item._id">{{item.category}}
+          </option>
+        </select>
+        <div [hidden]="categoryId.valid || categoryId.untouched">
+            <div *ngIf="categoryId.errors && categoryId.errors['required']"
+                class="alert alert-danger error-text">
+                Select the Category
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pad-20">
+      <div class="offset-md-3 col-md-2 col-sm-2 col-xs-12">
+        <label class="label-font">Item Name</label>
+      </div>
+      <div class="col-md-3 col-sm-2 col-xs-12">
+        <input type="text" class="form-control input-type social-media-font" name="itemName" #itemName="ngModel" pattern="[a-zA-Z]*" required [(ngModel)]="expense.itemName">
+        <div [hidden]="itemName.valid || itemName.untouched">
+            <div *ngIf="itemName.errors && itemName.errors['required']"
+                class="alert alert-danger error-text">
+                Enter the item name
+            </div>
+            <div *ngIf="itemName.errors && itemName.errors['pattern']"
+                class="alert alert-danger error-text">
+                Enter the valid item name
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pad-20">
+      <div class="offset-md-3 col-md-2 col-sm-2 col-xs-12">
+        <label class="label-font">Amount</label>
+      </div>
+      <div class="col-md-3 col-sm-2 col-xs-12">
+        <input type="number" class="form-control input-type social-media-font" name="amount" #amount="ngModel" pattern="[0-9]*" required [(ngModel)]="expense.amount">
+        <div [hidden]="amount.valid || amount.untouched">
+            <div *ngIf="amount.errors && amount.errors['required']"
+                class="alert alert-danger error-text">
+                Enter the amount
+            </div>
+            <div *ngIf="amount.errors && amount.errors['pattern']"
+                class="alert alert-danger error-text">
+                Enter the valid amount
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pad-20">
+      <div class="offset-md-3 col-md-2 col-sm-2 col-xs-12">
+        <label class="label-font">Expense Date</label>
+      </div>
+      <div class="col-md-3 col-sm-2 col-xs-12">
+        <input type="date" class="form-control input-type social-media-font" name="expenseDate" #expenseDate="ngModel" required [(ngModel)]="expense.expenseDate">
+        <div [hidden]="expenseDate.valid || expenseDate.untouched">
+            <div *ngIf="expenseDate.errors && expenseDate.errors['required']"
+                class="alert alert-danger error-text">
+                Enter the expense date
+            </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span *ngIf="!expenseId">
+        <button type="button" class="btn button-all  padding color-white" (click)="addExpense()" [disabled]="!expenseForm.valid">Add Expense
+        </button>
+      </span>
+      <span *ngIf="expenseId">
+        <button type="button" class="btn button-all  padding color-white"  (click)="updateExpense()">Update Expense
+        </button>
+      </span>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,32 @@
+
+    
+    <div class="container border-radius">
+      <div class="row pad-20">
+          <div class="col-md-12 text-center">
+              <h6>{{message}}</h6>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+              <span *ngIf="!isInfoModal">
+                  <div class="row btn-padding">
+                      <div class="offset-md-4 col-md-2">
+                  <button class="button-all  pad-10" (click)="submit(true)">Yes</button>
+              </div>
+              <div class=" col-md-2">
+                  <button class="button-all  pad-10" (click)="submit(false)">No</button>
+              </div>
+          </div>
+              </span>
+              
+          </div>
+      </div>
+      <div class="row pad-10">
+          <div class="col-md-12 text-center">
+                  <span *ngIf="isInfoModal">
+                          <button class="button-all btn text-center" (click)="submit(true)">Ok</button>
+                      </span>
+
+          </div>
+      </div>
+  </div>
