@@ -10,7 +10,7 @@
   "author": "neuroflares",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "compression": "^1.7.3",
     "express": "^4.16.4",
     "helmet": "^3.15.1",
