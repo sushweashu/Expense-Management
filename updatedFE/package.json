@@ -34,7 +34,7 @@
     "datatables.net-dt": "^1.10.19",
     "firebase": "^5.9.4",
     "jquery": "^3.3.1",
-    "jszip": "^3.1.5",
+    "jszip": "^3.7.0",
     "moment": "^2.24.0",
     "ng-multiselect-dropdown": "^0.2.3",
     "ng2-toastr": "^4.1.2",
